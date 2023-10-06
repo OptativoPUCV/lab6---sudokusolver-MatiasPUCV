@@ -97,7 +97,7 @@ int is_valid(Node *n)
         {
             for (int j = 0; j < 3; j++)
             {
-              printf("%i, ", (i+j) * k);
+              printf("%i, ", i * j);
             }
 
             printf("\n");
