@@ -91,21 +91,21 @@ int is_valid(Node *n)
         valid_arr(arr2, &result);
     }
 
-    for (int i = 0; i <= 6; i++) 
+    for (int i = 0; i <= 6; i += 3)
+    {
+        for (int j = 0; j <= 6; j += 3)
         {
-            for (int j = 0; j <= 6; j++) 
+            for (int k = i; k < i + 3; k++)
             {
-                for (int k = i; k < i + 3; k++)
+                for (int l = j; l < j + 3; l++)
                 {
-                    for (int l = j; l < j + 3; l++)
-                    {
-                        printf("%i ", n->sudo[i][j]);
-                    }
-                    printf("\n");
+                    printf("%i ", n->sudo[i][j]);
                 }
                 printf("\n");
             }
+            printf("\n");
         }
+    }
   
     return result;
 }
