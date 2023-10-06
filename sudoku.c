@@ -80,7 +80,12 @@ List *get_adj_nodes(Node *n) {
       }
     }
 
-  printf("[%i, %i]\n", i, j);
+  for (int index = 1; index < 10; index++)
+    {
+      Node* node = copy(n);
+      n->sudo[i][j] = index;
+      pushBack(list, node);
+    }
 
   return list;
 }
