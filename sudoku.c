@@ -70,16 +70,20 @@ void valid_arr(int* arr, bool* flag)
 
 int is_valid(Node *n)
 {
+    int* arr = malloc(sizeof(int) * 9);
     bool result = true;
 
     for (int i = 0; i < 9; i++)
     {
         int* arr = get_int_arr();
+      
         for (int j = 0; j < 9; j++)
         {
-            int index = n->sudo[i][j] - 1;
-            if (index != 0)
+            if (n->sudo[i][j] != 0)
+            {
+                int index = n->sudo[i][j] - 1;
                 arr[index] += 1;
+            }
         }
 
         valid_arr(arr, &result);
@@ -87,6 +91,7 @@ int is_valid(Node *n)
     }
   
 
+    free(arr);
     return result;
 }
 
