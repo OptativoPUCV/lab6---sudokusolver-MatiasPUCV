@@ -64,10 +64,20 @@ List *get_adj_nodes(Node *n) {
   int i, j;
   for(i = 0; i < 9; i++)
     {
+      int flag = 0;
       for (j = 0; j < 9; j++)
         {
-          
+          if (n->sudo[i][j])
+          {
+            flag = 1;
+            break;
+          }
         }
+
+      if (flag == 0)
+      {
+        break;
+      }
     }
 
   return list;
