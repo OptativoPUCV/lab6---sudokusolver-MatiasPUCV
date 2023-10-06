@@ -121,7 +121,7 @@ List *get_adj_nodes(Node *n) {
       Node* node = copy(n);
       n->sudo[i][j] = index;
 
-      if(is_valid(node))
+      if(is_valid(node) == true)
       {
         pushBack(list, node);
       }
