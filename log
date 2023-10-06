@@ -406,3 +406,17 @@ Fri 06 Oct 2023 09:24:56 PM UTC:
  tests:  3|4
 total_score: 20/70
 301a5bb
+Fri 06 Oct 2023 09:26:09 PM UTC: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:100:15: error: iteration 9 invokes undefined behavior [-Werror=aggressive-loop-optimizations]
+  100 |               printf("%i, ", n->sudo[i][j]);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sudoku.c:98:31: note: within this loop
+   98 |             for (int j = k; j < k-3; j++)
+      |                             ~~^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a9bfc98

@@ -91,11 +91,11 @@ int is_valid(Node *n)
         valid_arr(arr2, &result);
     }
 
-    for (int k = 0; k < 3; k++)
+    for (int k = 0; k < 9; k++)
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = k; i < k-3; i++)
         {
-            for (int j = 0; j < 3; j++)
+            for (int j = k; j < k-3; j++)
             {
               printf("%i, ", n->sudo[i][j]);
             }
