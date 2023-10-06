@@ -84,6 +84,8 @@ List *get_adj_nodes(Node *n) {
     {
       Node* node = copy(n);
       n->sudo[i][j] = index;
+
+      print_node(node);
       pushBack(list, node);
     }
 
