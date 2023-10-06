@@ -90,6 +90,19 @@ int is_valid(Node *n)
         valid_arr(arr1, &result);
         valid_arr(arr2, &result);
     }
+
+    for (int k = 0; k < 9; k++)
+    {
+      for (int p = 0; p < 9; p++)
+      {
+           int i=3*(k/3) + (p/3) ;
+           int j=3*(k%3) + (p%3) ;
+           printf("%i ", n->sudo[i][j]);
+          if(p%3 == 2) printf("\n");
+      }
+
+      printf("\n");
+    }
   
     return result;
 }
