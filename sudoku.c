@@ -61,11 +61,8 @@ int is_valid(Node *n)
 List *get_adj_nodes(Node *n) {
   List *list = createList();
 
-  int raw, column;
-  for (raw = 0; column < 9; column++)
-  {
+  int i, j;
 
-  }
 
   return list;
 }
