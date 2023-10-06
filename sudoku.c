@@ -99,7 +99,7 @@ int is_valid(Node *n)
             {
                 for (int l = j; l < j + 3; l++)
                 {
-                    printf("%i ", n->sudo[i][j]);
+                    printf("%i ", n->sudo[k][l]);
                 }
                 printf("\n");
             }
