@@ -90,7 +90,7 @@ int is_valid(Node *n)
         valid_arr(arr1, &result);
         valid_arr(arr2, &result);
     }
-
+/*
     for (int i = 0; i <= 6; i += 3)
     {
         for (int j = 0; j <= 6; j += 3)
@@ -107,7 +107,7 @@ int is_valid(Node *n)
             valid_arr(arr, &result);
         }
     }
-  
+*/
     return result;
 }
 
