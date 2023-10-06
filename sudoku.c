@@ -136,7 +136,10 @@ List *get_adj_nodes(Node *n)
         Node* node = copy(n);
         node->sudo[i][j] = index;
 
-        pushBack(list, node);
+        if (is_valid(node))
+            pushBack(list, node);
+        else
+            free(node);
     }
 
     return list;
