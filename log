@@ -290,3 +290,14 @@ Fri 06 Oct 2023 09:04:39 PM UTC:
  tests:  3|4
 total_score: 20/70
 d2f1ebe
+Fri 06 Oct 2023 09:04:53 PM UTC: 
+ sudoku.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:93:10: error: ‘arr’ undeclared (first use in this function)
+   93 |     free(arr);
+      |          ^~~
+sudoku.c:93:10: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a157c9d
