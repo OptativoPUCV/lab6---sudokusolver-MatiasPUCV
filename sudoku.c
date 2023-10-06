@@ -70,25 +70,29 @@ void valid_arr(int* arr, bool* flag)
 
 int is_valid(Node *n)
 {
-  int* arr = malloc(sizeof(int) * 9);
-  bool result = true;
+    int* arr = malloc(sizeof(int) * 9);
+    bool result = true;
 
-  for (int i = 0; i < 9; i++)
-  {
-      int* arr = get_int_arr();
-      for (int j = 0; j < 9; j++)
-      {
-        if (n->sudo[i][j] != 0)
-            arr[j]++;
-      }
+    for (int i = 0; i < 9; i++)
+    {
+        int* arr = get_int_arr();
+      
+        for (int j = 0; j < 9; j++)
+        {
+            if (n->sudo[i][j] != 0)
+            {
+                int index = n->sudo[i][j] - 1;
+                arr[index] += 1;
+            }
+        }
 
-      valid_arr(arr, &result);
-      free(arr);
-  }
+        valid_arr(arr, &result);
+        free(arr);
+    }
   
 
-  free(arr);
-  return result;
+    free(arr);
+    return result;
 }
 
 List *get_adj_nodes(Node *n) {
