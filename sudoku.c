@@ -70,7 +70,6 @@ void valid_arr(int* arr, bool* flag)
 
 int is_valid(Node *n)
 {
-    int* arr = malloc(sizeof(int) * 9);
     bool result = true;
 
     for (int i = 0; i < 9; i++)
@@ -88,7 +87,6 @@ int is_valid(Node *n)
     }
   
 
-    free(arr);
     return result;
 }
 
