@@ -134,8 +134,8 @@ List *get_adj_nodes(Node *n)
     for (int index = 0; index < 10; index++)
     {
         Node* node = copy(n);
+        node->sudo[i][j] = index;
 
-        print_node(node);
         pushBack(list, node);
     }
 
