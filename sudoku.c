@@ -162,7 +162,28 @@ int is_final(Node *n)
 }
 
 
-Node *DFS(Node *initial, int *cont) { return NULL; }
+Node *DFS(Node *initial, int *cont)
+{
+    Stack* stack = createStack();
+    push(stack, initial);
+
+    while(!is_empty(stack))
+    {
+        Node* node = top(stack);
+        pop(stack);
+
+        if (is_final(node))
+        {
+            clean(stack);
+            return node;
+        }
+      
+
+
+    }
+  
+    return NULL;
+}
 
 /*
 int main( int argc, char *argv[] ){
