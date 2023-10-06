@@ -79,9 +79,8 @@ int is_valid(Node *n)
         for (int j = 0; j < 9; j++)
         {
             int index = n->sudo[i][j] - 1;
-            if (n->sudo[i][j] != 0)
+            if (index != 0)
             {
-                
                 arr[index] += 1;
             }
         }
