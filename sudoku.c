@@ -122,9 +122,13 @@ List *get_adj_nodes(Node *n) {
       n->sudo[i][j] = index;
 
       if(is_valid(node))
+      {
         pushBack(list, node);
+      }
       else
+      {
         free(node);
+      }
     }
 
   return list;
