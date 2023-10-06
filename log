@@ -239,3 +239,9 @@ sudoku.c:48:15: note: destination object of size 9 allocated by ‘malloc’
 cc1: all warnings being treated as errors
 Compilation failed
 4cb4738
+Fri 06 Oct 2023 08:25:06 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|5
+total_score: 0/70
+3ac8909

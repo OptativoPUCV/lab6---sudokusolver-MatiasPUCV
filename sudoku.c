@@ -45,7 +45,7 @@ void print_node(Node *n) {
 
 int* get_int_arr()
 {
-  int* temp = malloc(sizeof(bool) * 9);
+  int* temp = malloc(sizeof(int) * 9);
 
   for (int i = 0; i < 9; i++)
     temp[i] = 0;
