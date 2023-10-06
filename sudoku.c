@@ -55,17 +55,16 @@ int* get_int_arr()
 
 void valid_arr(int* arr, bool* flag)
 {
-  bool temp = true;
+    bool temp = true;
 
-  for (int i = 0; i < 9; i++)
+    for (int i = 0; i < 9; i++)
     {
-      if ( !(arr[i] == 0 && arr[i] == 1) )
-        temp = false;
+        if (arr[i] != 0 && arr[i] != 1)
+            temp = false;
     }
-  
 
-  if (*flag == true && temp == false)
-    *flag = false;
+    if (*flag == true && temp == false)
+        *flag = false;
 
 }
 
@@ -79,11 +78,8 @@ int is_valid(Node *n)
       int* arr = get_int_arr();
       for (int j = 0; j < 9; j++)
       {
-
         if (n->sudo[i][j] != 0)
-        {
             arr[j]++;
-        }
       }
 
       valid_arr(arr, &result);
