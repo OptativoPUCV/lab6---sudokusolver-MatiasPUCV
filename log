@@ -301,3 +301,9 @@ sudoku.c:93:10: error: ‘arr’ undeclared (first use in this function)
 sudoku.c:93:10: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 a157c9d
+Fri 06 Oct 2023 09:05:01 PM UTC: 
+ sudoku.c | 2 --
+ 1 file changed, 2 deletions(-)
+ tests:  3|4
+total_score: 20/70
+2530098

@@ -89,8 +89,6 @@ int is_valid(Node *n)
         free(arr);
     }
   
-
-    free(arr);
     return result;
 }
 
