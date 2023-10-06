@@ -127,18 +127,16 @@ List *get_adj_nodes(Node *n)
             }
         }
 
-        if (flag == 1)
+        if (flag)
             break;
     }
 
     for (int index = 0; index < 10; index++)
     {
         Node* node = copy(n);
-        n->sudo[i][j] = index;
 
         print_node(node);
         pushBack(list, node);
-
     }
 
     return list;
