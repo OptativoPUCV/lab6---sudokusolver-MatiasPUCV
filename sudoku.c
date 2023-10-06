@@ -86,20 +86,6 @@ int is_valid(Node *n)
         valid_arr(arr, &result);
         free(arr);
     }
-
-    for (int i = 0; i < 9; i++)
-    {
-        int* arr = get_int_arr();
-        for (int j = 0; j < 9; j++)
-        {
-            int index = n->sudo[j][i] - 1;
-            if (index != 0)
-                arr[index] += 1;
-        }
-
-        valid_arr(arr, &result);
-        free(arr);
-    }
   
 
     free(arr);
