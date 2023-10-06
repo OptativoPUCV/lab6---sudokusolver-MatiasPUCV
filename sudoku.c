@@ -42,7 +42,21 @@ void print_node(Node *n) {
   printf("\n");
 }
 
-int is_valid(Node *n) { return 1; }
+int is_valid_helper(int* arr)
+{
+  
+}
+
+int is_valid(Node *n)
+{
+  int* arr = malloc(sizeof(int) * 9);
+
+  
+  
+
+  free(arr);
+  return 1;
+}
 
 List *get_adj_nodes(Node *n) {
   List *list = createList();
@@ -56,7 +70,6 @@ List *get_adj_nodes(Node *n) {
       
       if (n->sudo[raw][column] == 0)
       {
-        printf("[%i, %i]", raw, column);
         flag = 1;
         break;
       }
