@@ -104,7 +104,7 @@ int is_valid(Node *n)
                         arr[n->sudo[k][l] - 1] += 1;
                 }
             }
-            valid_arr(arr, &result)
+            valid_arr(arr, &result);
         }
     }
   
