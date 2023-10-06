@@ -132,7 +132,7 @@ List *get_adj_nodes(Node *n) {
       }
     }
 
-    for (int index = 1; index < 10; index++)
+    for (int index = 0; index < 9; index++)
     {
       Node* node = copy(n);
       n->sudo[i][j] = index;
