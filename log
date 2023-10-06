@@ -346,3 +346,9 @@ sudoku.c:79:14: error: unused variable ‘arr2’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 d3e707e
+Fri 06 Oct 2023 09:09:26 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|4
+total_score: 20/70
+0de3808

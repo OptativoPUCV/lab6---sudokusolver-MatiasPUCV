@@ -76,7 +76,7 @@ int is_valid(Node *n)
     for (int i = 0; i < 9; i++)
     {
         int* arr1 = get_int_arr();
-        int* arr2 = get_int_arr();
+        //int* arr2 = get_int_arr();
       
         for (int j = 0; j < 9; j++)
         {
