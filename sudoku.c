@@ -59,14 +59,23 @@ List* get_adj_nodes(Node* n)
         for (column = 0; raw < 9; raw++)
         {
             if(n->sudo[raw][column] == 0)
-                break;
+            {
+                for (int i = 0; i < 9; i++)
+                {
+                    Node* node = copy(n);
+                    n->sudo[raw][column] = i;
+                    pushBack(list, node);
+                }
+
+                return list;
+            }
         }
     }
 
     printf("[%i, %i]", raw, column);
 
   
-    return list;
+    return NULL;
 }
 
 
