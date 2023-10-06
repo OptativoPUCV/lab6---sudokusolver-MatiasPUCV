@@ -49,10 +49,23 @@ int is_valid(Node* n){
 }
 
 
-List* get_adj_nodes(Node* n){
+List* get_adj_nodes(Node* n)
+{
 
-    print_node(n);
-    List* list=createList();
+    List* list = createList();
+
+    for (int i = 0; i < 9; i++)
+    {
+        Node* node = copy(n);
+      
+        for (int j = 0; j < 9; j++)
+        {
+        }
+      
+        pushBack(list, node);
+    }
+
+  
     return list;
 }
 
