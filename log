@@ -225,3 +225,17 @@ Fri 06 Oct 2023 08:11:35 PM UTC:
  tests:  0|5
 total_score: 0/70
 83e6236
+Fri 06 Oct 2023 08:24:48 PM UTC: 
+ sudoku.c | 31 ++++++++++++++++++++++++++++++-
+ 1 file changed, 30 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_int_arr’:
+sudoku.c:51:13: error: ‘__builtin_memset’ writing 36 bytes into a region of size 9 [-Werror=stringop-overflow=]
+   51 |     temp[i] = 0;
+      |     ~~~~~~~~^~~
+sudoku.c:48:15: note: destination object of size 9 allocated by ‘malloc’
+   48 |   int* temp = malloc(sizeof(bool) * 9);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4cb4738

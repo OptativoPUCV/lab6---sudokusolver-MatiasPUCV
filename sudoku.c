@@ -1,6 +1,7 @@
 #include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct {
   int sudo[9][9];
@@ -42,6 +43,29 @@ void print_node(Node *n) {
   printf("\n");
 }
 
+int* get_int_arr()
+{
+  int* temp = malloc(sizeof(bool) * 9);
+
+  for (int i = 0; i < 9; i++)
+    temp[i] = 0;
+
+  return temp;
+}
+
+bool valid_arr(int* arr)
+{
+  bool temp = true;
+
+  for (int i = 0; i < 9; i++)
+    {
+      if ( !(arr[i] == 0 && arr[i] == 1) )
+        temp = false;
+    }
+
+  return temp;
+}
+
 int is_valid(Node *n)
 {
   int* arr = malloc(sizeof(int) * 9);
@@ -50,7 +74,12 @@ int is_valid(Node *n)
   {
       for (int j = 0; j < 9; j++)
       {
-        printf("%i, ", n->sudo[i][j]);    
+        int* arr = get_int_arr();
+
+        if (n->sudo[i][j] != 0)
+        {
+            arr[j]++;
+        }
       }
 
       printf("\n");
