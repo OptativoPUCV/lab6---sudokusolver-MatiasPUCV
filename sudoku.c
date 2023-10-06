@@ -132,10 +132,10 @@ List *get_adj_nodes(Node *n) {
       }
     }
 
-    for (int index = 1; index < 11; index++)
+    for (int index = 1; index < 10; index++)
     {
       Node* node = copy(n);
-      n->sudo[i][j] = index;
+      n->sudo[i][j] = index + 1;
 
       print_node(node);
       pushBack(list, node);
