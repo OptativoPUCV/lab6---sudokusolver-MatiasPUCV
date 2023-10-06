@@ -42,16 +42,19 @@ void print_node(Node *n) {
   printf("\n");
 }
 
-int is_valid_helper(int* arr)
-{
-  return 0;
-}
-
 int is_valid(Node *n)
 {
   int* arr = malloc(sizeof(int) * 9);
 
-  
+  for (int i = 0; i < 9; i++)
+  {
+      for (int j = 0; j < 9; j++)
+      {
+        printf("%i, ", n->[i][j]);    
+      }
+
+      printf("\n");
+  }
   
 
   free(arr);
@@ -84,8 +87,6 @@ List *get_adj_nodes(Node *n) {
     {
       Node* node = copy(n);
       n->sudo[i][j] = index;
-
-      print_node(node);
       pushBack(list, node);
     }
 
