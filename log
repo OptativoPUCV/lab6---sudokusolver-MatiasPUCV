@@ -452,3 +452,16 @@ Fri 06 Oct 2023 09:36:27 PM UTC:
  tests:  3|4
 total_score: 20/70
 bd11f83
+Fri 06 Oct 2023 09:39:40 PM UTC: 
+ sudoku.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:107:36: error: expected ‘;’ before ‘}’ token
+  107 |             valid_arr(arr, &result)
+      |                                    ^
+      |                                    ;
+  108 |         }
+      |         ~                           
+Compilation failed
+f75cb29

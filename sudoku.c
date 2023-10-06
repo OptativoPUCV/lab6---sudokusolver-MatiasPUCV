@@ -95,15 +95,16 @@ int is_valid(Node *n)
     {
         for (int j = 0; j <= 6; j += 3)
         {
+            int* arr = get_int_arr();
             for (int k = i; k < i + 3; k++)
             {
                 for (int l = j; l < j + 3; l++)
                 {
-                    printf("%i ", n->sudo[k][l]);
+                    if (n->sudo[k][l] != 0)
+                        arr[n->sudo[k][l] - 1] += 1;
                 }
-                printf("\n");
             }
-            printf("\n");
+            valid_arr(arr, &result)
         }
     }
   
