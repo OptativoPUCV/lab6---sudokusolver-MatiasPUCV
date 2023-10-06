@@ -91,7 +91,7 @@ int is_valid(Node *n)
         valid_arr(arr2, &result);
     }
 
-    for (int k = 0; k < 9; k++)
+    for (int k = 1; k < 10; k++)
     {
         for (int i = k; i < k-3; i++)
         {

@@ -420,3 +420,17 @@ sudoku.c:98:31: note: within this loop
 cc1: all warnings being treated as errors
 Compilation failed
 a9bfc98
+Fri 06 Oct 2023 09:26:33 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:100:15: error: iteration 8 invokes undefined behavior [-Werror=aggressive-loop-optimizations]
+  100 |               printf("%i, ", n->sudo[i][j]);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sudoku.c:98:31: note: within this loop
+   98 |             for (int j = k; j < k-3; j++)
+      |                             ~~^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+484c7b4
