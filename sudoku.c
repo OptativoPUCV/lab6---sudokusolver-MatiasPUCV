@@ -70,6 +70,7 @@ List *get_adj_nodes(Node *n) {
   {
     Node* node = copy(n);
     n->sudo[raw][column] = i;
+    pushBack(list, node);
   }
 
   return list;
