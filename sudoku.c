@@ -54,9 +54,9 @@ List* get_adj_nodes(Node* n)
     List* list = createList();
   
     int raw, column;
-    for (raw = 0; i < 9; i++)
+    for (raw = 0; column < 9; column++)
     {
-        for (column = 0; j < 9; j++)
+        for (column = 0; raw < 9; raw++)
         {
             if(n->sudo[raw][column] == 0)
                 break;
