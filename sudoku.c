@@ -174,11 +174,20 @@ Node *DFS(Node *initial, int *cont)
 
         if (is_final(node))
         {
-            clean(stack);
             return node;
+        }
+
+        List* adj = get_adj_nodes(node);
+
+        Node* temp = first(adj);
+        while( temp != NULL)
+        {
+            push(stack, temp);
+            temp = next(adj);  
         }
       
 
+        free(node);
 
     }
   
