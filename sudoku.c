@@ -74,7 +74,7 @@ List *get_adj_nodes(Node *n) {
           }
         }
 
-      if (flag == 0)
+      if (flag == 1)
       {
         break;
       }
