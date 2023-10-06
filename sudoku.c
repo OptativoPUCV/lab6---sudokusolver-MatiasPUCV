@@ -90,6 +90,19 @@ int is_valid(Node *n)
         valid_arr(arr1, &result);
         valid_arr(arr2, &result);
     }
+
+    for (int k = 1; k < 4; k++)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+              printf("%i, ", i);
+            }
+
+            printf("\n");
+        }
+    }
   
     return result;
 }
