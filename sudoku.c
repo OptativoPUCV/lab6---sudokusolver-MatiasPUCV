@@ -76,14 +76,11 @@ int is_valid(Node *n)
     for (int i = 0; i < 9; i++)
     {
         int* arr = get_int_arr();
-      
         for (int j = 0; j < 9; j++)
         {
-            if (n->sudo[i][j] != 0)
-            {
-                int index = n->sudo[i][j] - 1;
+            int index = n->sudo[i][j] - 1;
+            if (index != 0)
                 arr[index] += 1;
-            }
         }
 
         valid_arr(arr, &result);
@@ -92,12 +89,16 @@ int is_valid(Node *n)
 
     for (int i = 0; i < 9; i++)
     {
-      for (int j = 0; j < 9; j++)
-      {
-        printf("%i, ", n->sudo[j][i]);
-      }
+        int* arr = get_int_arr();
+        for (int j = 0; j < 9; j++)
+        {
+            int index = n->sudo[j][i] - 1;
+            if (index != 0)
+                arr[index] += 1;
+        }
 
-      printf("\n");
+        valid_arr(arr, &result);
+        free(arr);
     }
   
 
