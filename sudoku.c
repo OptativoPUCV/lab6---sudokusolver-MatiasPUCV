@@ -76,12 +76,12 @@ int is_valid(Node *n)
     for (int i = 0; i < 9; i++)
     {
         int* arr1 = get_int_arr();
+        int* arr2 = get_int_arr();
       
         for (int j = 0; j < 9; j++)
         {
-            int index = n->sudo[i][j] - 1;
             if (n->sudo[i][j] != 0)
-                arr1[index] += 1;
+                arr1[n->sudo[i][j] - 1] += 1;
         }
 
         valid_arr(arr1, &result);
