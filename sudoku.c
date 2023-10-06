@@ -50,7 +50,7 @@ int is_valid(Node *n)
   {
       for (int j = 0; j < 9; j++)
       {
-        printf("%i, ", n->[i][j]);    
+        printf("%i, ", n->sudo[i][j]);    
       }
 
       printf("\n");
