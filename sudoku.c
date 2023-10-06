@@ -62,7 +62,10 @@ List *get_adj_nodes(Node *n) {
   List *list = createList();
 
   int i, j;
-
+  for(i = 0; i < 9; i++)
+    {
+      
+    }
 
   return list;
 }
