@@ -90,24 +90,7 @@ int is_valid(Node *n)
         valid_arr(arr1, &result);
         valid_arr(arr2, &result);
     }
-/*
-    for (int i = 0; i <= 6; i += 3)
-    {
-        for (int j = 0; j <= 6; j += 3)
-        {
-            int* arr = get_int_arr();
-            for (int k = i; k < i + 3; k++)
-            {
-                for (int l = j; l < j + 3; l++)
-                {
-                    if (n->sudo[k][l] != 0)
-                        arr[n->sudo[k][l] - 1] += 1;
-                }
-            }
-            valid_arr(arr, &result);
-        }
-    }
-*/
+  
     return result;
 }
 
@@ -137,7 +120,11 @@ List *get_adj_nodes(Node *n) {
     {
       Node* node = copy(n);
       n->sudo[i][j] = index;
-      pushBack(list, node);
+
+      if(is_valid(node))
+        pushBack(list, node);
+      else
+        free(node);
     }
 
   return list;
