@@ -76,15 +76,19 @@ int is_valid(Node *n)
     for (int i = 0; i < 9; i++)
     {
         int* arr1 = get_int_arr();
-        //int* arr2 = get_int_arr();
+        int* arr2 = get_int_arr();
       
         for (int j = 0; j < 9; j++)
         {
             if (n->sudo[i][j] != 0)
                 arr1[n->sudo[i][j] - 1] += 1;
+
+            if (n->sudo[j][i] != 0)
+                arr2[n->sudo[j][i] - 1] += 1;
         }
 
         valid_arr(arr1, &result);
+        valid_arr(arr2, &result);
     }
   
     return result;
