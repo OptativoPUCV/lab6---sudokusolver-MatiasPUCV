@@ -137,9 +137,9 @@ List *get_adj_nodes(Node *n) {
       Node* node = copy(n);
       n->sudo[i][j] = index;
 
+      pushBack(list, node);
       if(is_valid(node) == true)
       {
-        pushBack(list, node);
         print_node(node);
       }
       else
