@@ -80,6 +80,8 @@ List *get_adj_nodes(Node *n) {
       }
     }
 
+  printf("[%i, %i]\n", i, j);
+
   return list;
 }
 
