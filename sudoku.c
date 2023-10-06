@@ -53,11 +53,12 @@ List *get_adj_nodes(Node *n) {
     for (column = 0; raw < 9; raw++)
     {
       int flag = 0;
-      printf("[%i, %i]", raw, column);
       
       if (n->sudo[raw][column] == 0)
       {
+        printf("[%i, %i]", raw, column);
         flag = 1;
+        break;
       }
 
       if (flag == 1)
@@ -65,7 +66,13 @@ List *get_adj_nodes(Node *n) {
     }
   }
 
-  return NULL;
+  for (int i = 1; i != 9; i++)
+  {
+    Node* node = copy(n);
+    n->sudo[raw][column] = i;
+  }
+
+  return list;
 }
 
 int is_final(Node *n) { return 0; }
