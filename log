@@ -495,3 +495,25 @@ Fri 06 Oct 2023 09:43:06 PM UTC:
  tests:  3|4
 total_score: 20/70
 04d1126
+Fri 06 Oct 2023 09:44:39 PM UTC: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:127:16: error: passing argument 1 of ‘printf’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  127 |         printf(node);
+      |                ^~~~
+      |                |
+      |                Node *
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdio.h:906,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/stdio2.h:84:32: note: expected ‘const char * restrict’ but argument is of type ‘Node *’
+   84 | printf (const char *__restrict __fmt, ...)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+In file included from test.c:5:
+sudoku.c:127:9: error: format not a string literal and no format arguments [-Werror=format-security]
+  127 |         printf(node);
+      |         ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1b9c1e5
