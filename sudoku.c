@@ -44,7 +44,7 @@ void print_node(Node *n) {
 
 int is_valid_helper(int* arr)
 {
-  
+  return 0;
 }
 
 int is_valid(Node *n)
@@ -61,30 +61,6 @@ int is_valid(Node *n)
 List *get_adj_nodes(Node *n) {
   List *list = createList();
 
-  int raw, column;
-  for (raw = 0; column < 9; column++)
-  {
-    for (column = 0; raw < 9; raw++)
-    {
-      int flag = 0;
-      
-      if (n->sudo[raw][column] == 0)
-      {
-        flag = 1;
-        break;
-      }
-
-      if (flag == 1)
-        break;
-    }
-  }
-
-  for (int i = 1; i != 9; i++)
-  {
-    Node* node = copy(n);
-    n->sudo[raw][column] = i;
-    pushBack(list, node);
-  }
 
   return list;
 }
