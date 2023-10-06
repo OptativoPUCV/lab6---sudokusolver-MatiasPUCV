@@ -133,11 +133,10 @@ List *get_adj_nodes(Node *n)
 
     for (int index = 0; index < 10; index++)
     {
-        printf("[%i]", index);
         Node* node = copy(n);
-        n->sudo[i][j] = index + 1;
+        n->sudo[i][j] = index;
 
-        //print_node(node);
+        print_node(node);
         pushBack(list, node);
 
     }
