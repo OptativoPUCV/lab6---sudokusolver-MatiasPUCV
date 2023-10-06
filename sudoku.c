@@ -67,7 +67,7 @@ List *get_adj_nodes(Node *n) {
       int flag = 0;
       for (j = 0; j < 9; j++)
         {
-          if (n->sudo[i][j])
+          if (n->sudo[i][j] == 0)
           {
             flag = 1;
             break;
